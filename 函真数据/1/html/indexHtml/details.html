@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>details</title>
+    <link rel="stylesheet" href="../../lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../lib/amazeui.min.css">
+    <!--<link rel="stylesheet" href="css/app.css">-->
+    <link rel="stylesheet" href="../../css/forecast.css">
+
+</head>
+<body>
+<header class="function-title" id="detail-hender">
+    <a href="#" class="am-margin-left-sm back">
+        <i class="am-icon-arrow-left"></i>
+    </a>
+</header>
+
+<div class="main">
+    <div class="part1">
+        <div class="container">
+            <!--指标块-->
+            <div class="am-list-item-hd">
+                <span class="am-icon-tachometer color-red"></span>
+                <span class="title">
+                    <span>指标</span>
+                    <span class="nobold">Index Data</span>
+                </span>
+            </div>
+            <!--指标内容-->
+            <div class="details">
+                <ul class="am-avg-sm-4 am-tabs-nav am-nav am-nav-tabs">
+                    <li>
+                        <span>市盈率<br>
+                        <span>10%</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>量比<br>
+                        <span>1.13</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>涨幅<br>
+                        <span>6.62%</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>振幅<br>
+                        <span>10%</span>
+                        </span>
+                    </li>
+                </ul>
+                <ul class="am-avg-sm-4 am-tabs-nav am-nav am-nav-tabs">
+                    <li>
+                        <span>市净值<br>
+                        <span>-44.66</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>每股收益<br>
+                        <span>-0.18</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>成交额<br>
+                        <span>3.54亿</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>总市值<br>
+                        <span>6.87亿</span>
+                        </span>
+                    </li>
+                </ul>
+                <ul class="am-avg-sm-3 am-tabs-nav am-nav am-nav-tabs">
+                    <li>
+                        <span>净利润现金含量<br>
+                        <span>10%</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>营业收入<br>
+                        <span>1.13</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>营业毛利率<br>
+                        <span>1.13</span>
+                        </span>
+                    </li>
+                </ul>
+                <ul class="am-avg-sm-2 am-tabs-nav am-nav am-nav-tabs">
+                    <li>
+                        <span>加权净资产收益率<br>
+                        <span>10%</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>经营活动现金净流量增长<br>
+                        <span>1.13</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+    <!--part2-->
+    <div class="part2">
+        <div class="container">
+            <!--操作建议块-->
+            <div class="am-list-item-hd">
+                <span class="am-icon-balance-scale color-red"></span>
+                <span class="title">
+                    <span>操作建议</span>
+                    <span class="nobold">Operate advise</span>
+                </span>
+            </div>
+            <!--正文-->
+            <div class="suggest">
+                <div>
+                    <p>
+                        推荐购买指数0.85，该股业绩优秀，基本面有良好的支撑，技术形态符合上涨趋势特征。中期涨幅区间0.1~0.5之间。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--part3-->
+    <div class="part2">
+        <div class="container">
+            <!--操作建议块-->
+            <div class="am-list-item-hd">
+                <span class="am-icon-balance-scale color-red"></span>
+                <span class="title">
+                    <span>同比增长率</span>
+                    <span class="nobold">Growth rate</span>
+                </span>
+            </div>
+            <!--数据展示-->
+            <div class="zline" id="main" style="height: 200px"></div>
+            <script src="../../js/dp_kline_3.js"></script>
+        </div>
+    </div>
+</div>
+<script id="temp-header" type="text/temp">
+    {{each items as item}}
+            {{item.name}}
+            <span class="am-header-icon am-icon-plus-square color-red  am-fr am-icon-sm" id="add"></span>
+    {{/each}}
+</script>
+<!--<script src="js/less.min.js"></script>-->
+<script src="../../lib/jquery/dist/jquery.min.js"></script>
+<script src="../../lib/amazeui.min.js"></script>
+<script src="../../lib/echart/echarts.min.js"></script>
+<script src="../../lib/artTemplate/dist/template.js"></script>
+<script src="../../js/forecast.js"></script>
+<script>
+    $(function () {
+        $.getJSON('../shares.json', function(data){
+            var id=getParam('id');
+            var data=data.items.filter(function (item) {
+                return item.tId==id;
+            });
+            var html = template('temp-header', {items:data});
+            $('#detail-hender').append(html);
+
+        });
+
+        function getParam(name) {
+            var match=RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+            return match && decodeURIComponent(match[1]);
+        }
+    })
+</script>
+</body>
+</html>

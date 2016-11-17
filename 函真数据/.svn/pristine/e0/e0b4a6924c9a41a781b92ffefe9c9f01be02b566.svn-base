@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, max-scale=2, user-scalable=no">
+    <title>自选</title>
+    <link rel="stylesheet" href="../font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/signal.css">
+    <style>
+        .signal span.wrap{
+            left: 20%;
+        }
+		#operate span{
+			margin-left: 0;
+		}
+		#main .fa-star{
+			margin-right: 5px;
+		}
+    </style>
+</head>
+<body>
+<div id="main">
+
+</div>
+</body>
+<script type="text/html" id="zixuan">
+    {{each modules as module}}
+        <ul id="{{module.id}}" class="signal">
+            <li class="title">
+            <a href="##">
+            <h2><i class="fa fa-star"></i>{{module.title}}
+            <span class="sub-title">{{module.subTitle}}</span>
+            </h2>
+            </a>
+            <span class="more">more >></span>
+            </li>
+            {{each module.items as item}}
+                <li>
+                <a href="##"><h3>{{item.name}}</h3></a>
+                <span class="wrap">
+                <span class="price">{{item.point}}</span>
+                <br>
+                <span class="date">{{item.price}}</span>
+                </span>
+                <span id="operate">
+                    {{each item.operate as operate}}
+                        <span class="">{{operate}}</span>
+                    {{/each}}
+                </span>
+                </li>
+            {{/each}}
+        </ul>
+    {{/each}}
+</script>
+<script src="../lib/jquery/dist/jquery.min.js"></script>
+<script src="../lib/artTemplate/dist/template.js"></script>
+<script src="../js/zixuan.js"></script>
+</html>

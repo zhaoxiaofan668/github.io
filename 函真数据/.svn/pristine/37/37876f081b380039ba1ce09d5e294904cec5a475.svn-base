@@ -1,0 +1,8 @@
+{{each list}}
+<tr>
+    <td>{{$value.id}}</td>
+    <td>{{$value.price}}</td>
+    <td>{{$value.num}}</td>
+    <td class="del">撤单</td>
+</tr>
+{{/each}}

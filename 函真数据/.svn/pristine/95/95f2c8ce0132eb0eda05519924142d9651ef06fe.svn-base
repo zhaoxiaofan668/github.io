@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="../../lib/amazeui.min.css"/>
+    <link rel="stylesheet" href="../../css/userMain.css"/>
+    <script src="../../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../../lib/amazeui.min.js"></script>
+</head>
+<body>
+<header class="function-title">
+    <a href="../user_data.html" class="am-margin-left-sm">
+        <i class="am-icon-arrow-left"></i>
+    </a>
+        用户信息
+</header>
+<div class="user-massage">
+    <ul class="am-list admin-sidebar-list user-list" id="collapase-nav-1">
+        <li class="am-panel first">
+            <a data-am-collapse="{parent: '#collapase-nav-1'}" href="#/">
+                头像
+                <span class="img">
+                    <img src="../../img/user1.jpg" alt=""/>
+                </span>
+            </a>
+        </li>
+        <li class="am-panel">
+            <a data-am-collapse="{parent: '#collapase-nav-1'}" href="#/">
+                昵称
+                <span class="am-fr am-margin-right">sun</span>
+            </a>
+        </li>
+        <li class="am-panel">
+            <a data-am-collapse="{parent: '#collapase-nav-1'}" href="#/">
+                性别
+                <span class="am-fr am-margin-right">男</span>
+            </a>
+        </li>
+        <li class="am-panel">
+            <a data-am-collapse="{parent: '#collapase-nav-1'}" href="#/">
+                电子邮箱
+                <span class="am-fr am-margin-right">dgkk@qq.com</span>
+            </a>
+        </li>
+        <li class="am-panel">
+            <a data-am-collapse="{parent: '#collapase-nav-1'}" href="#/">
+                手机号
+                <span class="am-fr am-margin-right">17136548965</span>
+            </a>
+        </li>
+        <li class="am-panel">
+            <a data-am-collapse="{parent: '#collapase-nav-1'}" href="#/">
+                地区
+                <span class="am-fr am-margin-right">北京 海淀</span>
+            </a>
+        </li>
+        <li class="am-panel last">
+            <a data-am-collapse="{parent: '#collapase-nav-1'}" href="#/">
+                个人签名
+                <span class="am-fr am-margin-right">听妈妈的话</span>
+            </a>
+        </li>
+
+    </ul>
+</div>
+</body>
+</html>

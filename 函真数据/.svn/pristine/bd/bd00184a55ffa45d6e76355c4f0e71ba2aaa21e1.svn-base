@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="../../lib/amazeui.min.css"/>
+    <link rel="stylesheet" href="../../css/userMain.css"/>
+    <script src="../../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../../lib/amazeui.min.js"></script>
+</head>
+<body>
+<header class="function-title">
+    <a href="../user_data.html" class="am-margin-left-sm">
+        <i class="am-icon-arrow-left"></i>
+    </a>
+    意见反馈
+</header>
+<div class="suggest-back">
+    <form action="">
+        <input type="text" placeholder="标题"/>
+        <textarea name="" id="" cols="30" rows="5"
+                  onfocus="if(value=='内容（200字以内）'){value=''}"
+                  onblur="if (value ==''){value='内容（200字以内）'}">内容（200字以内）
+        </textarea>
+    </form>
+    <a class="first" href="javascript:;">提交意见</a>
+    <div class="text">
+        <i class="am-icon-info-circle"></i>
+        重要提示：我们十分重视用户的意见反馈，如果您在本平台试用过程中，遇到任何问题需要解决帮助，或者对本平台功能设置方面有好的建议，都可以通过本页面进行提交，我们保证在一个工作日内给以反馈，并在后期平台升级过程中采纳好的意见建议。十分感谢参与。
+    </div>
+</div>
+</body>
+</html>

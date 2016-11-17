@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>choice</title>
+    <link rel="stylesheet" href="../../lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../lib/amazeui.min.css">
+    <!--<link rel="stylesheet" href="css/app.css">-->
+    <link rel="stylesheet" href="../../css/forecast.css">
+
+</head>
+<body>
+<header class="function-title">
+    <a href="#" class="am-margin-left-sm back">
+        <i class="am-icon-arrow-left"></i>
+    </a>
+    基本面精选
+    <span class="am-fr am-margin-right">more</span>
+</header>
+
+<div class="main">
+    <div class="part1">
+        <div class="container">
+            <div class="am-list-item-hd">
+                <span class="am-icon-th-large color-red"></span>
+                <span class="title">
+                    <span>精选信息</span>
+                    <span class="nobold">CHO</span>
+                    <span class="am-badge am-badge-danger am-radius">牛市多头</span>
+                </span>
+            </div>
+            <div class="am-tabs" data-am-tabs>
+                <ul class="am-tabs-nav am-nav am-nav-tabs">
+                    <li class="am-active"><a href="#tab1-1">上证指数</a></li>
+                    <li><a href="#tab1-2">中证500</a></li>
+                    <li><a href="#tab1-3">创业板指</a></li>
+                </ul>
+
+                <div class="am-tabs-bd">
+                    <div class="am-tab-panel am-fade am-in am-active" id="tab1-1">
+                        <div class="table-responsive">
+                            <div class="pages_sel_height">
+                                <div id="main" class="kline can"></div>
+                            </div>
+
+                            <script src="../../js/dp_kline.js"></script>
+                        </div>
+                    </div>
+                    <div class="am-tab-panel am-fade" id="tab1-2">
+                        <div class="table-responsive">
+                            <div class="pages_sel_height">
+                                <div id="main2" class="macd can"></div>
+                            </div>
+                            <script src="../../js/dp_kline_1.js"></script>
+                        </div>
+                    </div>
+                    <div class="am-tab-panel am-fade" id="tab1-3">
+                        <div class="table-responsive">
+                            <div class="pages_sel_height">
+                                <div id="main3" class="kdj can"></div>
+                            </div>
+                            <script src="../../js/dp_kline_1.js"></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--<script src="js/less.min.js"></script>-->
+<script src="../../lib/jquery/dist/jquery.min.js"></script>
+<script src="../../lib/amazeui.min.js"></script>
+<script src="../../lib/echart/echarts.min.js"></script>
+<script src="../../lib/artTemplate/dist/template.js"></script>
+<script src="../../js/forecast.js"></script>
+</body>
+</html>

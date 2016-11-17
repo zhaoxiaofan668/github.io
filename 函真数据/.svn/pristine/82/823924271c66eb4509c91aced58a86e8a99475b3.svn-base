@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="../../lib/amazeui.min.css"/>
+    <link rel="stylesheet" href="../../css/userMain.css"/>
+    <script src="../../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../../lib/amazeui.min.js"></script>
+</head>
+<body>
+<header class="function-title">
+    <a href="../user_data.html" class="am-margin-left-sm">
+        <i class="am-icon-arrow-left"></i>
+    </a>
+    功能选择
+    <a href="../indexHtml/trade.html" class="am-fr am-margin-right">记录</a>
+</header>
+<div class="function-choose">
+     <div class="text">
+         <i class="am-icon-info-circle"></i>选购说明：为了保证量化系统服务品质，在平台试用期间，即对所有功能模块进行收费，后期，将陆续啊，开放其他功能模块供会员订阅和购买。
+     </div>
+    <table class="function-list" >
+        <tr>
+            <td>
+                <a href="#" class="active">
+                    <i class="am-icon-th-large am-icon-md"></i>
+                    模块分析
+                </a>
+            </td>
+            <td>
+                <a href="#">
+                    <i class="am-icon-random am-icon-md"></i>
+                    买卖信号
+                </a>
+            </td>
+            <td>
+                <a href="#">
+                    <i class="am-icon-pie-chart am-icon-md"></i>
+                    资金持仓管理
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="#">
+                    <i class="am-icon-newspaper-o am-icon-md"></i>
+                    基本面精选
+                </a>
+            </td>
+            <td>
+                <a href="#">
+                    <i class="am-icon-globe am-icon-md"></i>
+                    全球市场预测
+                </a>
+            </td>
+            <td>
+                <a href="#">
+                    <i class="am-icon-retweet am-icon-md"></i>
+                    交易回测
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="#">
+                    <i class="am-icon-shopping-basket am-icon-md"></i>
+                    自定义股池
+                </a>
+            </td>
+            <td>
+                <a href="#">
+                    <i class="am-icon-area-chart am-icon-md"></i>
+                    资金曲线
+                </a>
+            </td>
+            <td>
+                <a href="#">
+                    <i class="am-icon-plus-square-o am-icon-md"></i>
+                    待新增
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

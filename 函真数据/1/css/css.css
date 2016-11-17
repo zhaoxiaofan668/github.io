@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: absolute;
+  top: 0;
+  bottom: 63px;
+  width: 100%;
+  overflow: auto;
+}
+header {
+  height: 9%;
+  padding: 0 10px;
+  background-color: #343434;
+  position: relative;
+  text-align: center;
+}
+header span {
+  font-size: 18px;
+  line-height: 49px;
+  color: #fff;
+}
+header .ico-search {
+  float: left;
+}
+header .refresh {
+  animation: refresh infinite;
+}
+@keyframes refresh {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+header .popover {
+  color: red;
+  background: #343434;
+}
+header .ico-email {
+  margin-left: 10px;
+  float: right;
+}
+header .ico-email i {
+  color: white;
+}
+header .header_banner {
+  display: inline-block;
+  color: white;
+  font-size: 22px;
+}
+header .ico-text {
+  color: red;
+}
+header svg {
+  height: 20px;
+  margin-right: -9px;
+}
+footer {
+  height: 10%;
+  background-color: #343434;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  color: #969696;
+  z-index: 999;
+}
+footer nav {
+  height: 100%;
+}
+footer .nav_list {
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+footer .nav_list .app_leftlist {
+  position: absolute;
+  width: 80%;
+  height: 1000%;
+  bottom: 0;
+  transition: all 1s;
+  transform: translateX(-100%);
+  background-color: #343434;
+}
+footer .nav_list .app_leftlist.active {
+  transform: translateX(0);
+}
+footer .nav_list:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+footer .nav_list li:nth-child(2) i {
+  transform: rotate(90deg);
+}
+footer .nav_list li {
+  padding-top: 10px;
+  display: inline-block;
+  width: 20%;
+  float: left;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  font-size: 15px;
+}
+footer .nav_list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+footer .nav_list li a.active {
+  background-color: whitesmoke;
+  opacity: 0.1;
+}
+footer .stock_data li {
+  width: 25%;
+}
+footer .stock_data li:nth-child(2) i {
+  transform: rotate(0deg);
+}
+.index_content {
+  position: absolute;
+  width: 100%;
+  bottom: 10%;
+  top: 0;
+  overflow: auto;
+}
+.app_leftlist ul {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: 100%;
+}
+.app_leftlist ul li {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  text-align: left;
+  text-indent: 15px;
+  line-height: 44px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+.app_leftlist ul li:after {
+  content: '<';
+  display: block;
+  position: absolute;
+  right: 5%;
+  top: 10px;
+  font-size: 20px;
+  transition: all 1s;
+  text-align: center;
+}
+.app_leftlist ul li.active:after {
+  transform: rotate(-90deg);
+}
+.app_leftlist ul li div {
+  background-color: #1a1a1a;
+  height: 0;
+  overflow: hidden;
+  transition: all 1s;
+}
+.app_leftlist ul li div.active {
+  height: 200px;
+}
+.app_leftlist ul li div span {
+  display: inline-block;
+  width: 50%;
+  float: left;
+  height: 44px;
+}
+.app_leftlist ul li div span:nth-child(2n-1) {
+  border-right: 1px solid #343434;
+}
+.app_leftMask {
+  width: 100%;
+  height: 1000%;
+  background-color: #343434;
+  position: absolute;
+  bottom: 0;
+  opacity: 0.8;
+}

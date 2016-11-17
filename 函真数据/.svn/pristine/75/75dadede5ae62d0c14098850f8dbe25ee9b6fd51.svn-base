@@ -1,0 +1,93 @@
+/**
+ * Created by shaw on 16-10-13.
+ */
+define(['jquery','bootstrap','template'],function (a,b,template) {
+    //获取买多信号的数据，并显示
+    $.getJSON('signal_data_buy.json', function(data){
+        var html = manipulateData(data);
+        $('#main .signal.buy').html(html);
+    });
+    $.getJSON('signal_data_sale.json', function(data){
+        var html = manipulateData(data);
+        $('#main .signal.sale').html(html);
+    });
+    $.getJSON('signal_data_full.json', function(data){
+        var html = manipulateData(data);
+        $('#main .signal.full').html(html);
+    });
+    $.getJSON('signal_data_custom.json', function(data){
+        var html = manipulateData(data);
+        $('#main .signal.custom').html(html);
+    });
+
+//处理获取json的数据，返回html代码字符串
+    function manipulateData (data){
+        var priceColorClass = '';
+        var eyeColor = '';
+        switch(data.title){
+            case '买多信号':
+                priceColorClass = 'color-red';
+                eyeColor = 'color-red';
+                break;
+            case '卖空信号':
+                priceColorClass = 'color-green';
+                eyeColor = 'color-green';
+                break;
+            case '平仓信号':
+                priceColorClass = 'color-brown';
+                eyeColor = 'color-brown';
+                break;
+            default: break;
+        }
+        var html = [
+            '<li class="title"><a href="##"><h2><i class="fa fa-eye ', eyeColor,'"></i>',
+            data.title,
+            '<span class="sub-title">',
+            data.subTitle,
+            '</span></h2></a><span class="more">more >></span></li>'
+        ].join('');
+
+        for (var i = 0; i < data.items.length; i++){
+            html += [
+                '<li>',
+                '<a href="##"><h3>', data.items[i].name,'</h3></a>',
+                '<span class="wrap">',
+                '<span class="price ', priceColorClass ,'">',data.items[i].price, '</span><br>',
+                '<span class="date">', data.items[i].date, '</span>',
+                '</span>'
+            ].join('');
+            if (data.items[i].operate){
+                html += '<span id="operate">';
+                for (var j = 0; j < data.items[i].operate.length; j++){
+                    if (data.items[i].operate[j]){
+                        var spanClass = '';
+                        switch(data.items[i].operate[j]){
+                            case '等待':
+                                spanClass = 'wait';
+                                break;
+                            case '准备':
+                                spanClass = 'wait';
+                                break;
+                            case '建仓':
+                            case '平仓':
+                                spanClass = 'create';
+                                break;
+                            default:
+                                break;
+                        }
+                        html += '<span class="'+ spanClass + '">' + data.items[i].operate[j] + '</span>';
+                    }
+                }
+                html += '</span>';
+            }
+            html += '</li>';
+        }
+        return html;
+    }
+    function color(){
+        $('#operate span').each(function(){
+            console.log(this);
+        });
+    }  
+});
+   

@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 微软雅黑;
+  font-size: 62.5%;
+  -webkit-text-size-adjust: none;
+}
+.function-title {
+  width: 100%;
+  height: 44px;
+  background-color: #343434;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ccc;
+  line-height: 44px;
+  font-size: 1.6rem;
+}
+.function-title a {
+  color: #ccc;
+  display: inline-block;
+  width: 40px;
+  position: relative;
+}
+.function-title a:after {
+  position: absolute;
+  top: 13px;
+  left: 30px;
+  display: inline-block;
+  content: "";
+  width: 1px;
+  height: 20px;
+  background-color: #969696;
+}
+.function-title span {
+  font-size: 1.4rem;
+}
+.main {
+  background-color: #3E3E3E;
+  height: 100%;
+  width: 100%;
+  padding-top: 44px;
+}
+.part1,
+.part2 {
+  background-color: #353535;
+}
+.part1 .container,
+.part2 .container {
+  background-color: #353535;
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+.part1 .container .am-list-item-hd,
+.part2 .container .am-list-item-hd {
+  padding-top: 10px;
+}
+.part1 .container .am-list-item-hd .am-icon-random,
+.part2 .container .am-list-item-hd .am-icon-random,
+.part1 .container .am-list-item-hd .am-icon-th-large,
+.part2 .container .am-list-item-hd .am-icon-th-large,
+.part1 .container .am-list-item-hd .am-icon-calendar,
+.part2 .container .am-list-item-hd .am-icon-calendar {
+  font-size: 1.6rem;
+}
+.part1 .container .am-list-item-hd .title span:first-child,
+.part2 .container .am-list-item-hd .title span:first-child {
+  color: white;
+  font-size: 1.6rem;
+  padding-right: 10px;
+}
+.part1 .container .am-list-item-hd .title span:last-child,
+.part2 .container .am-list-item-hd .title span:last-child {
+  line-height: 18px;
+  margin-left: 10px;
+}
+.part1 .container .am-tabs,
+.part2 .container .am-tabs {
+  padding-top: 15px;
+}
+.part1 .container .am-tabs ul,
+.part2 .container .am-tabs ul {
+  border: none;
+}
+.part1 .container .am-tabs ul li a,
+.part2 .container .am-tabs ul li a {
+  background-color: #353535;
+  color: #787878;
+  font-size: 1.4rem;
+}
+.part1 .container .am-tabs ul .am-active,
+.part2 .container .am-tabs ul .am-active {
+  position: relative;
+}
+.part1 .container .am-tabs ul .am-active a,
+.part2 .container .am-tabs ul .am-active a {
+  color: white;
+  border: 1px solid #787878;
+  border-bottom: none;
+  font-weight: 800;
+}
+.part1 .container .am-tabs ul .am-active:after,
+.part2 .container .am-tabs ul .am-active:after {
+  content: '';
+  display: table;
+  width: 92.5%;
+  height: 4px;
+  background-color: #353535;
+  z-index: 999;
+  position: absolute;
+  bottom: -3px;
+  left: 1px;
+}
+.part1 .container .am-tabs .am-tabs-bd,
+.part2 .container .am-tabs .am-tabs-bd {
+  border: 1px solid #787878;
+}
+.part1 .container .am-tabs .am-tabs-bd .am-tab-panel,
+.part2 .container .am-tabs .am-tabs-bd .am-tab-panel {
+  border: none;
+}
+.part1 .container .am-tabs .am-tabs-bd .am-tab-panel .table-responsive,
+.part2 .container .am-tabs .am-tabs-bd .am-tab-panel .table-responsive {
+  border: none;
+}
+.part1 .container .am-tabs .am-tabs-bd .am-tab-panel .table-responsive .pages_sel_height,
+.part2 .container .am-tabs .am-tabs-bd .am-tab-panel .table-responsive .pages_sel_height {
+  height: 200px;
+  width: 100%;
+}
+.part1 .container .am-tabs .am-tabs-bd .am-tab-panel .table-responsive .pages_sel_height .can,
+.part2 .container .am-tabs .am-tabs-bd .am-tab-panel .table-responsive .pages_sel_height .can {
+  width: 100%;
+  height: 100%;
+}
+.part1 .container .am-tabs .am-tabs-bd .am-tab-panel .table-responsive .table-striped,
+.part2 .container .am-tabs .am-tabs-bd .am-tab-panel .table-responsive .table-striped {
+  border-collapse: collapse;
+}
+.part1 .container .am-tabs .am-tabs-bd .am-tab-panel .table-responsive .table-striped thead th,
+.part2 .container .am-tabs .am-tabs-bd .am-tab-panel .table-responsive .table-striped thead th {
+  border: none;
+}
+.part1 .container .am-tabs .am-tabs-bd .am-tab-panel .table-responsive .table-striped tbody,
+.part2 .container .am-tabs .am-tabs-bd .am-tab-panel .table-responsive .table-striped tbody {
+  color: white;
+}
+.part1 .container .am-tabs .am-tabs-bd .am-tab-panel .table-responsive .table-striped tbody tr:nth-of-type(odd),
+.part2 .container .am-tabs .am-tabs-bd .am-tab-panel .table-responsive .table-striped tbody tr:nth-of-type(odd) {
+  background-color: #444444;
+}
+.part1 .container .am-tabs .am-tabs-bd .am-tab-panel .table-responsive .table-striped tbody tr td,
+.part2 .container .am-tabs .am-tabs-bd .am-tab-panel .table-responsive .table-striped tbody tr td {
+  border: none;
+}

@@ -1,0 +1,64 @@
+/**
+ * Created by shaw on 16-10-13.
+ */
+define(['jquery','bootstrap','template'],function (a,b,template) {
+    $.getJSON('zixuan.json', function(data){
+        var html = template('zixuan', {modules: data.modules});
+        //console.log(html);
+        $('#main').html(html);
+        initialColor();
+    });
+    //获取买多信号的数据，并显示
+    function initialColor(){
+        //给星星添加颜色
+        $('h2 i.fa').each(function(){
+            //console.log(this.className); fa fa-star
+            var id = $(this).parents('ul')[0].id;
+            var starColorClass = '';
+            //console.log(id); //one, two, three, four
+            switch(id){
+                case 'one':
+                    starColorClass = 'color-red';
+                    break;
+                case 'two':
+                    starColorClass = 'color-green';
+                    break;
+                case 'three':
+                    starColorClass = 'color-brown';
+                    break;
+                default: break;
+            }
+            $(this).addClass(starColorClass);
+
+        });
+        $('.price').addClass('color-green');
+        $('.date').addClass('color-red');
+        $('#operate span').each(function(){
+            var text = $(this).text();
+            console.log(text);
+            var color = '';
+            switch(text){
+                case '跌':
+                case '熊空':
+                    color = 'color-green';
+                    break;
+                case '盘':
+                case '牛空':
+                    color = 'color-brown';
+                    break;
+                case '涨':
+                case '牛多':
+                    color = 'color-red';
+                    break;
+                default:
+                    break;
+            }
+            $(this).addClass(color);
+        })
+    }
+
+});
+
+
+
+

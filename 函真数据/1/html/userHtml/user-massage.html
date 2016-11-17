@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="../../lib/amazeui.min.css"/>
+    <link rel="stylesheet" href="../../css/userMain.css"/>
+    <script src="../../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../../lib/amazeui.min.js"></script>
+    <script src="../../lib/artTemplate/dist/template.js"></script>
+</head>
+<body>
+<header class="function-title">
+    <a href="../user_data.html" class="am-margin-left-sm">
+        <i class="am-icon-arrow-left"></i>
+    </a>
+        用户信息
+</header>
+<div class="user-massage">
+    <ul class="am-list admin-sidebar-list user-list" id="collapase-nav-1">
+
+    </ul>
+</div>
+<script type="text/html" id="temp">
+    {{each users}}
+    <li class="am-panel first">
+        <a href="#">
+            头像
+                <span class="img">
+                    <img src="../../img/user1.jpg" alt=""/>
+                </span>
+        </a>
+    </li>
+    <li class="am-panel">
+        <a href="#">
+            昵称
+            <span class="am-fr am-margin-right">{{$value.name}}</span>
+        </a>
+    </li>
+    <li class="am-panel">
+        <a href="#">
+            性别
+            <span class="am-fr am-margin-right">{{$value.sex}}</span>
+        </a>
+    </li>
+    <li class="am-panel">
+        <a href="#">
+            电子邮箱
+            <span class="am-fr am-margin-right">{{$value.email}}</span>
+        </a>
+    </li>
+    <li class="am-panel">
+        <a href="#">
+            手机号
+            <span class="am-fr am-margin-right">{{$value.phone}}</span>
+        </a>
+    </li>
+    <li class="am-panel">
+        <a href="#">
+            地区
+            <span class="am-fr am-margin-right">{{$value.address}}</span>
+        </a>
+    </li>
+    <li class="am-panel last">
+        <a href="#">
+            个人签名
+            <span class="am-fr am-margin-right">{{$value.personal}}</span>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script>
+    var user = localStorage.getItem('currentUser');
+    user = JSON.parse(user);
+    var array = [];
+    array.push(user);
+    console.log(user);
+    var html = template('temp', {users: array});
+    $('#collapase-nav-1').html(html);
+</script>
+</body>
+</html>

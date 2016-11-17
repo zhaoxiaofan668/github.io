@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="../../lib/amazeui.min.css"/>
+    <link rel="stylesheet" href="../../css/userMain.css"/>
+    <script src="../../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../../lib/amazeui.min.js"></script>
+</head>
+<body>
+<header class="function-title">
+    <a href="../user_data.html" class="am-margin-left-sm">
+        <i class="am-icon-arrow-left"></i>
+    </a>
+    卡卷中心
+    <i class="am-icon-refresh am-fr am-margin-right"></i>
+</header>
+<ul class="my-list">
+    <li class="no-reade">
+        <a href="#">
+            <span>[未使用]</span>
+            免费六个月使用券
+            <span class="am-fr">09/29</span>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span>[已使用]</span>
+            免费一个月使用券
+            <span class="am-fr">09/20</span>
+        </a>
+    </li>
+</ul>
+</body>
+</html>

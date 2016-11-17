@@ -1,0 +1,172 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  position: absolute;
+  top: 0;
+  bottom: 63px;
+  width: 100%;
+  overflow: auto;
+}
+//头部
+header{
+  height: 9%;
+  padding: 0 10px;
+  background-color: #343434;
+  position: relative;
+  text-align: center;
+  span{
+    font-size: 18px;
+    line-height: 49px;
+    color: #fff;
+  }
+  .ico-search{
+    float: left;
+  }
+  .popover{
+      color: red;
+      background: #343434;
+  }
+  .ico-email{
+    margin-left: 10px;
+    float: right;
+    i{
+        color: white;
+    }
+    
+  }
+  .header_banner{
+    display: inline-block;
+    color: white;
+    font-size: 22px;
+  }
+  .ico-text{
+    color: red;
+  }
+  svg{
+    height: 20px;
+    margin-right: -9px;
+  }
+
+}
+//底部
+footer{
+  height: 10%;
+  background-color: #343434;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  color: #969696;
+  z-index: 999;
+  nav{
+    height: 100%;
+  }
+  .nav_list{
+      .app_leftlist{
+          position: absolute;
+         width: 80%;
+         height: 1000%;
+         bottom: 0;
+         transition: all 1s;
+         transform: translateX(-100%);
+         background-color: #343434;
+      }
+      .app_leftlist.active{
+         transform: translateX(0);
+      }
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    &:after{
+      content: '';
+      display: table;
+      clear: both;
+    }
+    li:nth-child(2) i{
+      transform: rotate(90deg);
+    }
+    li{
+      padding-top: 10px;
+      display: inline-block;
+      width: 20%;
+      float: left;
+      height: 100%;
+      text-align: center;
+      position: relative;
+      font-size: 15px;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+      }
+
+    }
+  }
+  //数据页（stock_data.html)底部样式
+  .stock_data{
+    li{
+      width: 25%;
+    }
+    li:nth-child(2){
+      i{
+        transform: rotate(0deg);
+      }
+
+    }
+  }
+}
+.index_content{    position: absolute;
+  width: 100%;
+  bottom: 10%;
+  top: 0;
+  overflow: auto;
+}
+.app_leftlist{
+  ul{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+    li{
+      display: block;
+      width: 100%;
+      min-height: 44px;
+      line-height: 44px;
+      border-bottom: 1px solid #2b669a;
+      div{
+        height: 0;
+        overflow: hidden;
+        transition: all 1s;
+        border-top: 1px solid whitesmoke;
+        &.active{
+         height: 200px;
+
+        }
+        span{
+          display: inline-block;
+          width: 50%;
+          float: left;
+          height: 44px;
+          border-bottom: 1px solid whitesmoke;
+        }
+        span:nth-child(2n-1){
+          border-right: 1px solid whitesmoke;
+        }
+
+      }
+
+    }
+  }
+}
+.app_leftMask{
+  width: 100%;
+  height: 1000%;
+  background-color: #343434;
+  position: absolute;
+  bottom: 0;
+  opacity: 0.2;
+}

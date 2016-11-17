@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>模拟</title>
+    <link rel="stylesheet" href="../../lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../lib/layer/skin/layer.css">
+    <link rel="stylesheet" href="../../lib/bootstrapValidator/css/bootstrapValidator.min.css">
+    <link rel="stylesheet" href="../../lib/amazeui.min.css">
+    <link rel="stylesheet" href="../../css/moni.css">
+</head>
+<body>
+<div class="moni-main">
+    <!--模拟练习头部-->
+    <div  class="am-list-news am-list-news-default" data-am-widget="list_news" >
+        <div class="am-list-news-hd am-cf">
+            <a href="#" class=""></a>
+            <h2>
+                <span class="am-icon-tachometer color-red"></span>
+                模拟练习区
+                <span class="nobold">&nbsp;Simulation rounds</span>
+            </h2>
+        </div>
+    </div>
+    <!--选项卡部分-->
+
+    <div class="am-tabs" data-am-tabs="{noSwipe: 1}" id="doc-tab-demo-1">
+        <ul class="am-avg-sm-5 am-tabs-nav am-nav am-nav-tabs" >
+            <li class="am-active" >
+                <a href="#tab1" id="t1">
+            <span class="am-icon-sign-in span-1" ><br>
+            <span class="span-in span-2" >买入</span>
+            </span>
+                </a>
+            </li>
+            <li>
+                <a href="#tab2" id="t2" >
+            <span class="am-icon-sign-out span-1" ><br>
+            <span  class="span-out span-2" >卖出</span>
+            </span></a>
+            </li>
+            <li>
+                <a href="#tab3" id="t3" >
+            <span class="am-icon-times-circle-o span-1" ><br>
+            <span  class="span-o span-2" >撤单</span>
+            </span></a>
+            </li>
+            <li>
+                <a href="#tab4" id="t4" >
+            <span class="am-icon-database span-1" ><br>
+            <span  class="span-database span-2" >持仓</span>
+            </span></a>
+            </li>
+            <li>
+                <a href="#tab5" id="t5" >
+            <span class="am-icon-search span-1" ><br>
+            <span  class="span-search span-2" >查询</span>
+            </span></a>
+            </li>
+        </ul>
+
+        <div class="am-tabs-bd" style="border: none;">
+            <div class="am-tab-panel am-active" id="tab1">
+                <form action="" class="am-form" id="form1">
+                    <div class="form-group am-form-set">
+                        <input type="tel" placeholder="股票代码" name="id" class="form-control">
+                    </div>
+                    <div class="form-group am-form-set">
+                        <input type="tel" placeholder="价格" name="price" class="form-control">
+                    </div>
+                    <div class="form-group am-form-set">
+                        <input type="tel" placeholder="数量" name="num" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <button id="btn1" type="submit" class="am-btn am-btn-danger am-btn-block am-radius">买入</button>
+                    </div>
+                </form>
+            </div>
+            <div class="am-tab-panel am-fade" id="tab2">
+                <form action="" class="am-form" id="form2">
+                    <div class="form-group am-form-set">
+                        <input type="tel" placeholder="股票代码" name="id" class="form-control">
+                    </div>
+                    <div class="form-group am-form-set">
+                        <input type="tel" placeholder="价格" name="price" class="form-control">
+                    </div>
+                    <div class="form-group am-form-set">
+                        <input type="tel" placeholder="数量" name="num" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <button id="btn2" type="submit" class="am-btn am-btn-success am-btn-block am-radius">卖出</button>
+                    </div>
+                </form>
+            </div>
+            <div class="am-tab-panel" id="tab3">
+                空
+            </div>
+            <div class="am-tab-panel" id="tab4">
+                <div class="div-tab4" >
+                    <ul class="am-avg-sm-3 am-tabs-nav am-nav am-nav-tabs" >
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="am-tab-panel" id="tab5">
+                5
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script type="text/html" id="data">
+    <div class="div-tab4" >
+    <ul class="am-avg-sm-3 am-tabs-nav am-nav am-nav-tabs" >
+        {{each list as item}}
+        <li>
+            <span  class="span-tab4-1" >总资产(元)<br/>
+                <span class="span-tab4-2" >{{item.caption}}</span>
+            </span>
+        </li>
+        <li>
+            <span class="span-tab4-1" >月交易(次)<br/>
+                <span class="span-tab4-2" >{{item.deal}}</span>
+            </span>
+        </li>
+        <li>
+            <span class="span-tab4-1" >成功率<br/>
+                <span class="span-tab4-2" >{{item.success}}</span>
+            </span>
+        </li>
+        <li class="shen">
+            <span class="span-tab4-1" >总收益<br/>
+                <span class="span-tab4-2" >{{item.allprofit}}</span>
+            </span>
+        </li>
+        <li class="shen">
+            <span class="span-tab4-1" >本月收益<br/>
+                <span class="span-tab4-2" >{{item.monthprofit}}</span>
+            </span>
+        </li>
+        <li class="shen">
+            <span class="span-tab4-1">本周收益<br/>
+                <span class="span-tab4-2">{{item.weekprofit}}</span>
+            </span>
+        </li>
+        {{/each}}
+
+    </ul>
+    </div>
+
+</script>
+
+
+
+<script src="../../lib/jquery/dist/jquery.min.js"></script>
+<script src="../../lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../lib/artTemplate/dist/template.js"></script>
+<script src="../../lib/layer/layer.js"></script>
+<script src="../../lib/bootstrapValidator/js/bootstrapValidator.min.js"></script>
+<script src="../../lib/amazeui.min.js"></script>
+<script src="../../js/moni.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=2, user-scalable=no">
+    <title>板块分析</title>
+    <link rel="stylesheet" href="../font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/module.css">
+</head>
+<body>
+    <div id="modules">
+        <!--<ul class="module recommend">-->
+            <!--<li class="title">-->
+                <!--<h2><i></i>推荐板块</h2>-->
+                <!--<span>「妖股」</span>-->
+                <!--<span class="sub-title">Recommend plate</span>-->
+                <!--<a href="##" class="more">more >></a>-->
+            <!--</li>-->
+            <!--<li class="clearfix">-->
+                    <!--<a href="##">-->
+                        <!--<table class="sub-module">-->
+                            <!--<caption class="sub-title"><h3>丝绸之路</h3></caption>-->
+                            <!--<tr>-->
+                                <!--<td>西安旅游</td>-->
+                                <!--<td><i class="fa fa-eye"></i></td>-->
+                                <!--<td><i class="fa fa-star"></i></td>-->
+                                <!--<td><i class="fa fa-bookmark"></i></td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td>西安旅游</td>-->
+                                <!--<td><i class=""></i></td>-->
+                                <!--<td><i class=""></i></td>-->
+                                <!--<td><i class="fa fa-bookmark"></i></td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td>西安旅游</td>-->
+                                <!--<td><i class=""></i></td>-->
+                                <!--<td><i class=""></i></td>-->
+                                <!--<td><i class="fa fa-bookmark"></i></td>-->
+                            <!--</tr>-->
+                        <!--</table></a>-->
+                <!--<a href="##">-->
+                    <!--<table class="sub-module">-->
+                        <!--<caption class="sub-title"><h3>丝绸之路</h3></caption>-->
+                        <!--<tr>-->
+                            <!--<td>西安旅游</td>-->
+                            <!--<td><i class="fa fa-eye"></i></td>-->
+                            <!--<td><i class="fa fa-star"></i></td>-->
+                            <!--<td><i class="fa fa-bookmark"></i></td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td>西安旅游</td>-->
+                            <!--<td><i class="fa fa-eye"></i></td>-->
+                            <!--<td><i class="fa fa-star"></i></td>-->
+                            <!--<td><i class="fa fa-bookmark"></i></td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td>西安旅游</td>-->
+                            <!--<td><i class="fa fa-eye"></i></td>-->
+                            <!--<td><i class="fa fa-star"></i></td>-->
+                            <!--<td><i class="fa fa-bookmark"></i></td>-->
+                        <!--</tr>-->
+                    <!--</table></a>-->
+                <!--<a href="##">-->
+                    <!--<table class="sub-module">-->
+                        <!--<caption class="sub-title"><h3>丝绸之路</h3></caption>-->
+                        <!--<tr>-->
+                            <!--<td>西安旅游</td>-->
+                            <!--<td><i class="fa fa-eye"></i></td>-->
+                            <!--<td><i class="fa fa-star"></i></td>-->
+                            <!--<td><i class="fa fa-bookmark"></i></td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td>西安旅游</td>-->
+                            <!--<td><i class="fa fa-eye"></i></td>-->
+                            <!--<td><i class="fa fa-star"></i></td>-->
+                            <!--<td><i class="fa fa-bookmark"></i></td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td>西安旅游</td>-->
+                            <!--<td><i class="fa fa-eye"></i></td>-->
+                            <!--<td><i class="fa fa-star"></i></td>-->
+                            <!--<td><i class="fa fa-bookmark"></i></td>-->
+                        <!--</tr>-->
+                    <!--</table></a>-->
+            <!--</li>-->
+        <!--</ul>-->
+
+
+    </div>
+</body>
+<script src="../js/jquery-1.8.2.min.js"></script>
+<script src="../js/module.js"></script>
+</html>

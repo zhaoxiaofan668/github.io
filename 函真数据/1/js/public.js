@@ -1,0 +1,62 @@
+/**
+ * New node file
+ */
+
+define(['jquery','getData','template','hammer'],function(a,getData,template){
+	// require(['jquery']);
+	require(['bootstrap']);
+	left_ul();
+	hammer_list();
+	dataRefresh();
+	// requirejs(['bootstrap']);
+	$('.ico-email.address').popover({"title":"联系我们","content":"3344@126.com","placement":"left"});
+	// 打开关闭侧边信息栏
+	function left_ul(){
+			$('.nav_list').append($('<div><div/>').addClass('app_leftlist'));
+		getData.getLeftTemp(function(res){
+			$('.app_leftlist').append($('<script><script/>').html(res).attr({"id":"left_tmeplate","type":"text/html"}));
+		getData.getLeftData(function(res){
+			var html=template('left_tmeplate',res);
+			$('.app_leftlist').html(html);
+			$('.app_leftlist ul li').on('click',function (e){
+                if($(e.target).find('div').hasClass('active')){
+					$(e.target).removeClass('active').find('div').removeClass('active');
+				}else {
+					$(e.target).parent('ul').find('li').removeClass('active').find('div').removeClass('active');
+					$(e.target).toggleClass('active').find('div').toggleClass('active');
+				}
+			})
+			
+	});
+	})
+	}
+	// 侧边栏蒙板
+	$('.stock_list').on('click',function(){
+		open_list();
+	});
+	//手势打开侧边栏
+	function hammer_list() {
+		var hammer = new Hammer(document.body);
+		hammer.on('panstart',function (ev) {
+			if(ev.pointers[0].clientX<50){
+				open_list();
+			}
+		})
+
+	}
+	function open_list() {
+		$('.app_leftlist').addClass('active');
+		$('body').append($('<div>dd<div/>').addClass('app_leftMask'));
+		$('.app_leftMask').on('click',function () {
+			$('.app_leftlist').removeClass('active');
+			$('.app_leftMask').remove();
+		})
+	}
+	// 刷新图标
+	function dataRefresh() {
+		$('.refresh').click(function () {
+			console.log(this);
+			$(this).addClass('refresh');
+		})
+	}
+	});

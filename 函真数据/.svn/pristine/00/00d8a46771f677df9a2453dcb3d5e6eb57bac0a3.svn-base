@@ -1,0 +1,36 @@
+/**
+ * New node file
+ */
+
+define(['jquery','getData','template'],function(a,getData,template){	
+	left_ul();
+	function left_ul(){
+			$('.nav_list').append($('<div><div/>').addClass('app_leftlist'));
+		getData.getLeftTemp(function(res){
+			$('.app_leftlist').append($('<script><script/>').html(res).attr({"id":"left_tmeplate","type":"text/html"}));
+		getData.getLeftData(function(res){
+			var html=template('left_tmeplate',res);
+			$('.app_leftlist').html(html);
+			$('.app_leftlist ul li').on('click',function (e){
+                if($(e.target).find('div').hasClass('active')){
+					$(e.target).find('div').removeClass('active');
+				}else {
+					$(e.target).parent('ul').find('div').removeClass('active');
+					$(e.target).children('div').toggleClass('active');
+				}
+
+			})
+			
+	});
+	})
+		
+	}
+	$('.stock_list').on('click',function(){
+	$('.app_leftlist').addClass('active');
+		$('body').append($('<div>dd<div/>').addClass('app_leftMask'));
+		$('.app_leftMask').on('click',function () {
+			$('.app_leftlist').removeClass('active');
+			$('.app_leftMask').remove();
+		})
+	})
+	});

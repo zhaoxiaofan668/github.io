@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=2, user-scalable=no">
+    <title>资金持仓管理</title>
+    <link rel="stylesheet" href="../font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/signal.css">
+    <style>
+        .signal span.wrap{
+            left: 20%;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <ul class="signal buy">
+        <!--<li class="title">-->
+        <!--<a href="##">-->
+        <!--<h2><i class="fa fa-area-chart"></i>买多信号-->
+        <!--<span class="sub-title">Buy Signal Top5</span>-->
+        <!--</h2>-->
+        <!--</a>-->
+        <!--<span class="more">more >></span>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a href="##"><h3>螺纹1701</h3></a>-->
+        <!--<span class="wrap">-->
+        <!--<span class="price">3千多/买价2532</span>-->
+        <!--<br>-->
+        <!--<span class="date">2016/08/25 10:23:15</span>-->
+        <!--</span>-->
+        <!--<span class="operate">-->
+        <!--<span class=" operate-focus">关注</span>-->
+        <!--<span class=" operate-operate">操作</span>-->
+        <!--</span>-->
+        <!--</li>-->
+        <!--<li></li>-->
+        <!--<li></li>-->
+        <!--<li></li>-->
+    </ul>
+</div>
+<script type="text/html" id="cash">
+    {{each modules as module}}
+    <ul class="signal cash-manage">
+        <li class="title">
+        <a href="##">
+        <h2><i class="fa fa-inbox"></i>{{module.title}}
+        <span class="sub-title">{{module.subTitle}}</span>
+        </h2>
+        </a>
+        <span class="more">more >></span>
+        </li>
+        {{each module.items as item}}
+            <li>
+            <a href="##"><h3>{{item.name}}</h3></a>
+            <span class="wrap">
+            <span class="price">{{item.point}}</span>
+            <br>
+            <span class="date">{{item.price}}</span>
+            </span>
+            <span id="operate">
+                {{each item.operate as operate}}
+                    <span class=" ">{{operate}}</span>
+                {{/each}}
+            </span>
+            </li>
+        {{/each}}
+    </ul>
+    {{/each}}
+</script>
+</body>
+<script src="../js/jquery-1.8.2.min.js"></script>
+<script src="../js/template.js"></script>
+<script>
+    //cash.js
+    $(document).ready(function(){
+        $.getJSON('cash_manage.json',function(data){
+            var html = template('cash', {modules: data.modules})
+            //console.log(html);
+            $('#main').html(html);
+            initialColor();
+        })
+    });
+    function initialColor(){
+        //给星星添加颜色
+        $('h2 i.fa').each(function(){
+            //console.log(this.className); fa fa-star
+            var id = $(this).parents('ul')[0].id;
+            var color = '';
+            alert(id);
+            switch(id){
+                case 'buyList':
+                    color = 'color-red';
+                    break;
+                case 'sellList':
+                    color = 'color-green';
+                    break;
+                case 'position':
+                    color = 'color-brown';
+                    break;
+                default: break;
+            }
+
+            $(this).addClass(color);
+
+        });
+        $('.price').addClass('color-green');
+        $('.date').addClass('color-red');
+        $('#operate span').each(function(){
+            var text = $(this).text();
+            //console.log(text);
+            var color = '';
+            switch(text){
+                case '待减':
+                case '较重':
+                    color = 'color-green';
+                    break;
+                case '一般':
+                case '续持':
+                    color = 'color-brown';
+                    break;
+                case '平仓':
+                case '正常':
+                case '良好':
+                case '较高':
+                    color = 'color-red';
+                    break;
+                default:
+                    break;
+            }
+            $(this).addClass(color);
+        })
+    }
+</script>
+</html>
+

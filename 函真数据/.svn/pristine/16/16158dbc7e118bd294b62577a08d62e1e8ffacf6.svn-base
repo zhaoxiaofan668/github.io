@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>divdata</title>
+    <link rel="stylesheet" href="../../lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../lib/amazeui.min.css">
+    <!--<link rel="stylesheet" href="css/app.css">-->
+    <link rel="stylesheet" href="../../css/forecast.css">
+
+</head>
+<body>
+<header class="function-title">
+    <a href="#" class="am-margin-left-sm back">
+        <i class="am-icon-arrow-left"></i>
+    </a>
+    股市行情
+    <span class="am-fr am-margin-right">more</span>
+</header>
+
+<div class="main">
+    <div class="part1">
+        <div class="container">
+            <div class="am-list-item-hd">
+                <span class="am-icon-th-large color-red"></span>
+                <span class="title">
+                    <span>大盘行情</span>
+                    <span class="nobold">BIG</span>
+                    <span class="am-badge am-badge-danger am-radius">形势大好</span>
+                </span>
+            </div>
+            <div id="NB" style="height: 400px;width: 100%">
+
+            </div>
+            <script src="../../js/dp_kline_2.js"></script>
+        </div>
+    </div>
+
+</div>
+
+<!--<script src="js/less.min.js"></script>-->
+<script src="../../lib/jquery/dist/jquery.min.js"></script>
+<script src="../../lib/amazeui.min.js"></script>
+<script src="../../lib/echart/echarts.min.js"></script>
+<script src="../../lib/artTemplate/dist/template.js"></script>
+<script src="../../js/forecast.js"></script>
+</body>
+</html>

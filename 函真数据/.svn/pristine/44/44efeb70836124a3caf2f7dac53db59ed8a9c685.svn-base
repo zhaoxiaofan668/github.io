@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=2, user-scalable=no">
+    <title>资金持仓管理</title>
+    <link rel="stylesheet" href="../font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/signal.css">
+    <link rel="stylesheet" href="../css/back_bar.css">
+    <style>
+        .signal span.wrap{
+            left: 20%;
+        }
+        .signal span.wrap .price{
+            position: relative;
+        }
+        .fa-inbox{
+            margin-right: 5px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<header class="function-title">
+    <a href="../index.html" class="fa fa-arrow-left">
+        <i class="am-icon-arrow-left"></i>
+    </a>
+    资金持仓管理
+</header>
+
+<div id="main">
+    <ul class="signal buy">
+
+    </ul>
+</div>
+<script type="text/html" id="cash">
+    {{each modules as module}}
+    <ul class="signal cash-manage">
+        <li class="title">
+        <a href="##">
+        <h2><i class="fa fa-inbox"></i>{{module.title}}
+        <span class="sub-title">{{module.subTitle}}</span>
+        </h2>
+        </a>
+        <span class="more">more >></span>
+        </li>
+        {{each module.items as item}}
+            <li>
+            <a href="##"><h3>{{item.name}}</h3></a>
+            <span class="wrap">
+            <span class="price">{{item.point}}</span>
+            <br>
+            <span class="date">{{item.price}}</span>
+            </span>
+            <span id="operate">
+                {{each item.operate as operate}}
+                    <span class=" ">{{operate}}</span>
+                {{/each}}
+            </span>
+            </li>
+        {{/each}}
+    </ul>
+    {{/each}}
+</script>
+</body>
+<script src="../lib/jquery/dist/jquery.min.js"></script>
+<script src="../lib/artTemplate/dist/template.js"></script>
+<script src="../js/cash.js"></script>
+</html>
+

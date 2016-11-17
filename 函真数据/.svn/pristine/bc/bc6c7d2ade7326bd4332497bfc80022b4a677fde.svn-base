@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函真数据测试</title>
+    <meta name="viewport" content="initial-scale=1,max-scale=2,user-scalable=no">
+
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../lib/amazeui.min.css">
+    <link rel="stylesheet" href="../../css/news-list.css">
+
+</head>
+<body>
+<!--头部-->
+<header class="function-title">
+    <a href="../../index.html" class="am-margin-left-sm">
+        <i class="am-icon-arrow-left"></i>
+    </a>
+    头条参考
+</header>
+<!--内容部分-->
+<div class="so-header">
+    <div class="news-list">
+
+    </div>
+</div>
+<!--底部-->
+<div data-am-widget="gotop" class="am-gotop am-gotop-default" id="gotop">
+    <a href="#top" title="回到顶部">
+        <span class="am-gotop-title">回到顶部</span>
+        <i class="am-gotop-icon am-icon-chevron-up"></i>
+    </a>
+</div>
+
+<!--模版-->
+<script type="text/html" id="tmp1">
+    {{each data}}
+    <a class="moban" href="txt.html?id={{$value.id}}">
+        <div class="media clearfix" style="border-bottom: 1px solid grey">
+            <!--左边部分-->
+            <div class="media-left">
+                <img class="lazy" data-original="{{$value.big}}" alt="...">              <!--{big}替换部分  -->
+            </div>
+            <!--右边内容-->
+            <div class="media-body">
+                <h4 class="media-heading">
+                    {{$value.title}}                            <!--{title}替换部分   -->
+                </h4>
+                <p class="other">
+                    <img class="header" src="{{$value.small}}" alt="">     <!--{small}替换部分  -->
+                    <span>手机网</span><span>100评论</span>         <!--{author}替换部分和{time}替换部分     -->
+                </p>
+                <a href=""></a>
+            </div>
+        </div>
+    </a>
+    {{/each}}
+</script>
+
+
+<script src="../../lib/jquery/dist/jquery.min.js"></script>
+<script src="../../lib/jquery.lazyload.js"></script>
+<script src="../../lib/artTemplate/dist/template.js"></script>
+<script src="../../lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../lib/amazeui.min.js"></script>
+<script src="../../js/news-list.js"></script>
+</body>
+</html>

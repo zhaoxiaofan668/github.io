@@ -1,0 +1,56 @@
+/**
+ * Created by YangZi on 2016/10/14.
+ */
+$(function() {
+    register();
+    validator();
+    //表单验证
+    function validator(){
+        $('#doc-vld-msg').validator({
+            onValid: function(validity) {
+                $(validity.field).closest('.am-form-group').find('.am-alert').hide();
+            },
+
+            onInValid: function(validity) {
+                var $field = $(validity.field);
+                var $group = $field.closest('.am-form-group');
+                var $alert = $group.find('.am-alert');
+                // 使用自定义的提示信息 或 插件内置的提示信息
+                var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
+
+                if (!$alert.length) {
+                    $alert = $('<div class="am-alert am-alert-danger"></div>').hide().
+                        appendTo($group);
+                }
+
+                $alert.html(msg).show();
+            }
+        });
+    }
+    //注册信息
+    function register(){
+        var localUser = [];
+        $('#register').click(function(){
+            var emali = $("form input[name='email']").val();
+            var password = $("form input[name='password']").val();
+            var phone = $("form input[name='phone']").val();
+            var key = $("form input[name='key']").val();
+            var objRegister = {
+                "email": emali,
+                "password": password,
+                "phone": phone,
+                "key": key,
+                "name" : ''
+            };
+            //存储用户信息并添加当前用户信息
+            if(localStorage.getItem('users')){
+                localUser = JSON.parse(localStorage.getItem('users'));
+            }
+            localUser.push(objRegister);
+            localStorage.setItem('users',JSON.stringify(localUser));
+            alert('success');
+            window.location = 'user-login.html';
+        })
+    }
+
+});

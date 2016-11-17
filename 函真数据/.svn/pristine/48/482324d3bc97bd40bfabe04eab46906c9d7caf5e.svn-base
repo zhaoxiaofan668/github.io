@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/search.css">
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../lib/artTemplate/dist/template.js"></script>
+</head>
+<body>
+<div class="search"><input type="text"  placeholder="请输入代码或简拼"  id="text"><span class="sub">搜索</span></div>
+<div class="tpm">
+
+</div>
+<script type="text/html" id="html">
+    <div class="biaoti"><h2> {{name}} </h2></div>
+    <div class="cont">
+        <div class="am-u-sm-3">
+            <span class="am-u-sm-12">开盘价:{{openningPrice}}</span>
+            <span class="am-u-sm-6 gr">{{growth}}</span>
+            <span class="am-u-sm-6 gr">{{growthPercent}}</span>
+        </div>
+        <div class="am-u-sm-9">
+            <div class="am-u-sm-12">
+                <span>最高价:{{hPrice}}</span>
+                <span>收盘价:{{closingPrice}}</span>
+            </div>
+            <div class="am-u-sm-12">
+                <span>当前价:{{currentPrice}}</span>
+                <span>最低价:{{lPrice}}</span>
+            </div>
+        </div>
+
+    </div>
+
+</script>
+<script src="../js/search.js"></script>
+</body>
+</html>

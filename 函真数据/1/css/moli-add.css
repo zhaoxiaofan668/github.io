@@ -1,0 +1,78 @@
+
+#tab3 .am-tabs {
+    padding-top: 15px;
+}
+
+#tab3 .am-tabs ul {
+    border: none;
+}
+#tab3 .am-tabs ul li{
+    border: none;
+
+}
+#tab3 .am-tabs ul li a {
+    background-color: #3E3E3E;
+    color: #787878;
+    font-size: 1.4rem;
+   line-height: 10px;
+}
+
+#tab3 .am-tabs ul .am-active {
+    position: relative;
+}
+
+#tab3 .am-tabs ul .am-active a {
+    color: white;
+    border: 1px solid #787878;
+    border-bottom: none;
+    font-weight: 800;
+}
+
+#tab3 .am-tabs ul .am-active:after {
+    content: '';
+    display: table;
+    width: 62px;
+    height: 4px;
+    background-color: #3E3E3E;
+    z-index: 999;
+    position: absolute;
+    bottom: -2px;
+    left: 1px;
+}
+
+#tab3 .am-tabs .am-tabs-bd {
+    border: 1px solid #787878;
+}
+
+#tab3 .am-tabs .am-tabs-bd .am-tab-panel {
+    border: none;
+}
+
+#tab3 .am-tabs .am-tabs-bd .am-tab-panel .table-responsive {
+    border: none;
+}
+
+
+#tab3 .am-tabs .am-tabs-bd .am-tab-panel .table-responsive .table-striped {
+    border-collapse: collapse;
+}
+
+#tab3 .am-tabs .am-tabs-bd .am-tab-panel .table-responsive .table-striped thead th {
+    border: none;
+    color: #929292;
+}
+
+#tab3 .am-tabs .am-tabs-bd .am-tab-panel .table-responsive .table-striped tbody {
+    color: white;
+}
+
+#tab3 .am-tabs .am-tabs-bd .am-tab-panel .table-responsive .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #444444;
+}
+
+#tab3 .am-tabs .am-tabs-bd .am-tab-panel .table-responsive .table-striped tbody tr td {
+    border: none;
+}
+#tab3 .am-tabs .am-tabs-bd .am-tab-panel .table-responsive .table-striped tbody tr td:last-child {
+    color: #C65748;
+}

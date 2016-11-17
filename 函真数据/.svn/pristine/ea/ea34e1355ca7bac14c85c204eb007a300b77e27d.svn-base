@@ -1,0 +1,138 @@
+@charset "UTF-8";
+body,
+html {
+  height: 100%;
+}
+.moni-main {
+  width: 100%;
+  height: 100%;
+  background-color: #3d3d3d;
+  padding: 0;
+}
+.moni-main .am-list-news {
+  margin-top: -2px;
+  margin-bottom: 15px;
+}
+.moni-main .am-list-news .am-list-news-hd h2 {
+  color: #eeeeee;
+}
+.moni-main .am-list-news .am-list-news-hd h2 .am-icon-tachometer {
+  color: orangered;
+}
+.moni-main .am-tabs .am-nav-tabs {
+  border: none;
+}
+.moni-main .am-tabs .am-nav-tabs li.am-active {
+  border: none;
+}
+.moni-main .am-tabs .am-nav-tabs li.am-active a {
+  color: #444444;
+  border: none;
+  background-color: #444;
+}
+.moni-main .am-tabs .am-nav-tabs li.am-active a:focus,
+.moni-main .am-tabs .am-nav-tabs li.am-active a:hover {
+  background-color: #444;
+  border: none;
+}
+.moni-main .am-tabs .am-nav-tabs li a {
+  border: none;
+  padding-top: 25px;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+}
+.moni-main .am-tabs .am-nav-tabs li a:hover {
+  background-color: #444444;
+}
+.moni-main .am-tabs .am-nav-tabs li a .span-1 {
+  position: relative;
+  top: -6px;
+  font-size: 22px;
+  z-index: 1;
+}
+.moni-main .am-tabs .am-nav-tabs li a .span-2 {
+  font-size: 12px;
+  position: relative;
+  color: #eeeeee;
+  top: -15px;
+}
+.moni-main .am-tabs .am-nav-tabs li a .am-icon-sign-in {
+  color: #f05e4b;
+}
+.moni-main .am-tabs .am-nav-tabs li a .am-icon-sign-out {
+  color: #27ae60;
+}
+.moni-main .am-tabs .am-nav-tabs li a .am-icon-times-circle-o {
+  color: #eeeeee;
+}
+.moni-main .am-tabs .am-nav-tabs li a .am-icon-database {
+  color: #fea356;
+}
+.moni-main .am-tabs .am-nav-tabs li a .am-icon-search {
+  color: #12b7f5;
+}
+.moni-main .am-tabs .am-nav-tabs li a .span-o {
+  top: -16px;
+}
+.moni-main .am-tabs .am-tabs-bd {
+  border: none;
+}
+.moni-main .am-tabs .am-tabs-bd #tab1 .am-form .am-form-set input,
+.moni-main .am-tabs .am-tabs-bd #tab2 .am-form .am-form-set input {
+  background: none;
+  border: none;
+  color: #eeeeee;
+  box-shadow: none;
+  border-bottom: 1px solid #444;
+}
+.moni-main .am-tabs .am-tabs-bd #tab1 .am-form .am-form-set .am-btn,
+.moni-main .am-tabs .am-tabs-bd #tab2 .am-form .am-form-set .am-btn {
+  position: relative;
+  z-index: 1;
+  float: right;
+  padding-right: 5px;
+  margin-top: -32px;
+  height: 30px;
+  line-height: 14px;
+  font-size: 16px;
+  background: none;
+  border: none;
+  color: #eeeeee;
+}
+.moni-main .am-tabs .am-tabs-bd #tab3 {
+  color: #8D8D8D;
+}
+.moni-main .am-tabs .am-tabs-bd #tab4 .div-tab4 {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+.moni-main .am-tabs .am-tabs-bd #tab4 .div-tab4 .am-nav-tabs {
+  padding: 2px 0 1px 0;
+  border: none;
+}
+
+.moni-main .am-tabs .am-tabs-bd #tab4 .div-tab4 .am-nav-tabs .shen{
+  background-color: #444444;
+}
+
+.moni-main .am-tabs .am-tabs-bd #tab4 .div-tab4 .am-nav-tabs li {
+  text-align: center;
+}
+.moni-main .am-tabs .am-tabs-bd #tab4 .div-tab4 .am-nav-tabs .span-tab4-1 {
+  color: #8D8D8D;
+  position: relative;
+  font-size: 12px;
+}
+.moni-main .am-tabs .am-tabs-bd #tab4 .div-tab4 .am-nav-tabs .span-tab4-2 {
+  font-size: 14px;
+  position: relative;
+  top: -5px;
+  color: #eeeeee;
+}
+.moni-main .am-tabs .am-tabs-bd #tab4 .div-tab4 .ul-nav {
+  background: #444;
+}
+.moni-main .am-tabs .am-tabs-bd #tab5 {
+  color: #8D8D8D;
+}

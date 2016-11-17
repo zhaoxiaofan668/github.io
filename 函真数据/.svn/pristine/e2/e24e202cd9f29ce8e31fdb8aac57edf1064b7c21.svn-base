@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#main{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    background-color: #3d3d3d;
+    color: #acacac;
+}
+.signal a{
+    text-decoration: none;
+}
+.signal{
+    list-style: none;
+    width: 100%;
+
+}
+.signal li{
+    min-width: 320px;
+    height: 44px;
+    position: relative;
+    border-bottom: 1px solid #444;
+    border-top: 1px solid #444;
+    padding: 5px 10px;
+}
+.signal h2, h3{
+    color: #dadada;
+    position: relative;
+    font-weight: 600;
+}
+.signal h2{
+    font-size: 18px;
+}
+.signal .sub-title{
+    font-size: 12px;
+}
+.signal .more{
+    position: absolute;
+    font-size: 12px;
+    right:0;
+    bottom: 0;
+    cursor: pointer;
+}
+.signal h3{
+    float: left;
+    line-height: 34px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.signal h3 .signal span.wrap{
+    display: inline-block;
+
+}
+.signal span.wrap{
+    position: absolute;
+    float: left;
+    height: 100%;
+    left: 30%;
+    margin-left: 20px;
+    line-height: 15px;
+}
+.signal span.wrap .price{
+    position: absolute;
+    top: 0;
+    left:0;
+}
+.signal span.wrap .date{
+
+    bottom: 0;
+    left: 0;
+}
+#operate{
+    float: right;
+    font-size: 14px;
+}
+#operate span{
+    display: inline-block;
+    text-align: center;
+    background-color: #666;
+    border-radius: 10%;
+    padding: 0 2px;
+    height: 22px;
+    margin-left: 5px;
+    cursor: pointer;
+    color: #dadada;
+}
+.signal span.wrap .date, .signal span.wrap .price{
+    font-size: 10px;
+}
+.title h2{
+    display: inline-block;
+}
+#operate span{
+    margin-top: 5%;
+}
+
+
+#operate .wait, #operate .color-green{
+    background-color: #27ae60;
+}
+#operate .ready, #operate .color-brown{
+    background-color: #E67E22;
+}
+#operate .create, #operate .color-red{
+    background-color: #E74C3C;
+}
+.color-green{
+    color: #27ae60;
+}
+.color-brown{
+    color: #E67E22;
+}
+.color-red{
+    color: #E74C3C;
+}

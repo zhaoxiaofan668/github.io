@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>trade</title>
+    <link rel="stylesheet" href="../../lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../lib/amazeui.min.css">
+    <!--<link rel="stylesheet" href="css/app.css">-->
+    <link rel="stylesheet" href="../../css/forecast.css">
+    <style>
+        .part1 .container .am-tabs ul .am-active:after,
+        .part2 .container .am-tabs ul .am-active:after,
+        .part3 .container .am-tabs ul .am-active:after {
+            content: '';
+            display: table;
+            width: 90%;
+            height: 4px;
+            background-color: #353535;
+            z-index: 999;
+            position: absolute;
+            bottom: -3px;
+            left: 1px;
+        }
+    </style>
+</head>
+<body>
+<header class="function-title">
+    <a href="../../index.html" class="am-margin-left-sm back">
+        <i class="am-icon-arrow-left"></i>
+    </a>
+    交易回测
+    <span class="am-fr am-margin-right">more</span>
+</header>
+
+<div class="main">
+    <div class="part1">
+        <div class="container">
+            <div class="am-list-item-hd">
+                <span class="am-icon-random color-red"></span>
+                <span class="title">
+                    <span>交易信息</span>
+                    <span class="nobold">TRA</span>
+                    <span class="am-badge am-badge-danger am-radius">当月亏损</span>
+                    <span class="am-icon-refresh nobold am-fr am-icon-lg" id="refresh"></span>
+                </span>
+            </div>
+            <div class="am-tabs" data-am-tabs>
+                <ul class="am-tabs-nav am-nav am-nav-tabs">
+                    <li class="am-active"><a href="#tab1">买入</a></li>
+                    <li><a href="#tab2">卖出</a></li>
+                </ul>
+
+                <div class="am-tabs-bd">
+                    <div class="am-tab-panel am-fade am-in am-active" id="tab1">
+                        <div class="table-responsive">
+                            <table cellspacing="0" class="table table-small-font table-striped">
+                                <thead>
+                                <tr>
+                                    <th>股票代码</th>
+                                    <th>价格（元）</th>
+                                    <th>数量（个）</th>
+                                    <th>总额（元）</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="am-tab-panel am-fade" id="tab2">
+                        <div class="table-responsive">
+                            <table cellspacing="0" class="table table-small-font table-striped">
+                                <thead>
+                                <tr>
+                                    <th>股票代码</th>
+                                    <th>价格（元）</th>
+                                    <th>数量（个）</th>
+                                    <th>总额（元）</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<script src="js/less.min.js"></script>-->
+<script src="../../lib/jquery/dist/jquery.min.js"></script>
+<script src="../../lib/amazeui.min.js"></script>
+<script src="../../lib/echart/echarts.min.js"></script>
+<script src="../../lib/artTemplate/dist/template.js"></script>
+<script src="../../js/forecast.js"></script>
+</body>
+</html>

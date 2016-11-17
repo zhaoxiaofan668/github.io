@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, max-scale=2, user-scalable=no">
+    <title>信号</title>
+    <link rel="stylesheet" href="../font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/signal.css">
+</head>
+<body>
+    <div id="main">
+        <ul class="signal buy">
+
+        </ul>
+    </div>
+</body>
+<script type="text/html" id="signal">
+    {{each modules as module}}
+    <ul class="signal" id="{{module.id}}">
+        <li class="title">
+        <a href="##">
+        <h2><i class="fa fa-eye"></i>{{module.title}}
+        <span class="sub-title">{{module.subTitle}}</span>
+        </h2>
+        </a>
+        <span class="more">more >></span>
+        </li>
+        {{each module.items as item}}
+            <li>
+            <a href="##"><h3>{{item.name}}</h3></a>
+            <span class="wrap">
+            <span class="price">{{item.price}}</span>
+            <br>
+            <span class="date">{{item.date}}</span>
+            </span>
+            <span id="operate">
+            {{each item.operate as operate}}
+                <span class=" operate-focus">{{operate}}</span>
+            {{/each}}
+            </span>
+            </li>
+        {{/each}}
+    </ul>
+    {{/each}}
+</script>
+<script src="../lib/jquery/dist/jquery.min.js"></script>
+<script src="../lib/artTemplate/dist/template.js"></script>
+<script src="../js/signal.js"></script>
+<script>
+
+</script>
+</html>

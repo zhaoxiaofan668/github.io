@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>焦点新闻1</title>
+    <meta name="viewport" content="initial-scale=1,max-scale=2,user-scalable=no">
+    <!--<link rel="stylesheet" href="../../lib/amazeui.min.css">-->
+    <link rel="stylesheet" href="../../css/news.css">
+
+</head>
+<body>
+
+<div class="news">
+    <p class="news-title">
+        国资委：以增强活力提高效率为中心改革做强央    <!--新闻title替换部分-->
+    </p>
+
+        <p class="news-time">
+            2016年10月09日 17:40:06 <!--新闻time替换部分-->
+        </p>
+
+    <div class="news-content">
+                                                       <!--新闻content替换部分-->
+        <p class="news-content-1">
+        “下一步做强做优做大中央企业要以增强活力、提高效率为中心深化改革。”国
+        资委主任肖亚庆在“学习习近平总书记重要指示批示专题研讨会”上说。他同时
+        表示，下一步国资委实施以供给侧结构改革为重点，大力调整央企布局结构，加
+        快推进股份制改革，稳妥推进混合所有制，加快董事会试点建设等多项改革力促
+        央企做强做优做大。
+        </p>
+        <p class="news-content-2">
+        “下一步做强做优做大中央企业要以增强活力、提高效率为中心深化改革。”国
+        资委主任肖亚庆在“学习习近平总书记重要指示批示专题研讨会”上说。他同时
+        表示，下一步国资委实施以供给侧结构改革为重点，大力调整央企布局结构，加
+        快推进股份制改革，稳妥推进混合所有制，加快董事会试点建设等多项改革力促
+        央企做强做优做大。
+        </p>
+        <p class="news-content-3">
+        “下一步做强做优做大中央企业要以增强活力、提高效率为中心深化改革。”国
+        资委主任肖亚庆在“学习习近平总书记重要指示批示专题研讨会”上说。他同时
+        表示，下一步国资委实施以供给侧结构改革为重点，大力调整央企布局结构，加
+        快推进股份制改革，稳妥推进混合所有制，加快董事会试点建设等多项改革力促
+        央企做强做优做大。
+        </p>
+    </div>
+</div>
+</body>
+</html>

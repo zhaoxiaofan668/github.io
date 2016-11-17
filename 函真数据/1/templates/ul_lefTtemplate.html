@@ -1,0 +1,12 @@
+<ul>
+    {{each data1}}
+        <li>{{$value.title}}
+        <div>
+        	 {{each $value.list as i}}
+        	<span>{{i}}</span>
+        	 {{/each}}
+        </div>
+        </li>
+        
+    {{/each}}
+</ul>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>房地产行业</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=2, user-scalable=no">
+    <link rel="stylesheet" href="../font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../lib/amazeui.min.css">
+    <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/shares.css">
+    <link rel="stylesheet" href="../css/forecast.css">
+    <style>
+
+    </style>
+</head>
+<body>
+<header class="function-title">
+    <a href="../index.html" class="am-margin-left-sm">
+        <i class="am-icon-arrow-left"></i>
+    </a>
+    行业精选
+</header>
+    <!--头部-->
+    <div class="part2">
+        <div class="container">
+            <!--操作建议块-->
+            <div class="am-list-item-hd">
+                <span class="am-icon-bar-chart color-red"></span>
+                <span class="title">
+                    <span>大盘板块对比</span>
+                    <span class="nobold">Market vs Plate</span>
+                </span>
+            </div>
+            <!--正文-->
+            <div class="suggest" >
+                <div id="main" class="zline" style="height: 200px">
+
+                </div>
+                <script src="../js/dp_zline.js"></script>
+            </div>
+
+            <!--第二部分-->
+            <div id="content" class="am-tabs" data-am-tabs>
+                <ul class="am-tabs-nav am-nav am-nav-tabs">
+                    <li id="longtou" class="am-active"><a href="#tab1">龙头</a></li>
+                    <li id="news"><a href="#tab2">新闻</a></li>
+                </ul>
+
+                <div class="am-tabs-bd">
+                    <div class="am-tab-panel am-fade am-in am-active" id="tab1">
+
+                    </div>
+                    <div class="am-tab-panel am-fade" id="tab2">
+                        暂无新闻
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script type="text/html" id="zixuan">
+        <ul ass="container-fluid">
+            {{each items as item}}
+            <li id="{{item.id}}" class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="indexHtml/details.html?id={{item.id}}"><h3 class="name">{{item.name}}</h3></a>
+                </div>
+                <div class="col-lg-5 col-sm-5 col-md-5 col-xs-5">
+                    <span class="col-info">
+                        <span class="point">{{item.point}}</span>
+                        <br>
+                        <span class="price">{{item.price}}</span>
+                    </span>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <span id="operate" >
+                        <span><i class="fa fa-plus-square"></i><span class="item">加自选</span></span>
+                    </span>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+</script>
+<script src="../lib/jquery/dist/jquery.min.js"></script>
+<script src="../lib/artTemplate/dist/template.js"></script>
+<script src="../lib/echart/echarts.min.js"></script>
+<script src="../lib/amazeui.min.js"></script>
+<script src="../js/shares.js"></script>
+</html>

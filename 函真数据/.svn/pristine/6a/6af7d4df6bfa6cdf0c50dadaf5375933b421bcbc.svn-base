@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,max-scale=2,user-scalable=no">
+
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../lib/amazeui.min.css">
+    <link rel="stylesheet" href="../../css/txt.css">
+</head>
+<body>
+<header class="function-title">
+    <a href="new-list.html" class="am-margin-left-sm">
+        <i class="am-icon-arrow-left"></i>
+    </a>
+    新闻列表
+</header>
+<div class="new-list">
+    <div class="title"></div>
+    <div class="time"></div>
+    <div class="article"></div>
+</div>
+
+
+</body>
+<script src="../../lib/jquery/dist/jquery.min.js"></script>
+<script src="../../lib/artTemplate/dist/template.js"></script>
+<script>
+var id =getQueryString('id');
+
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+
+    $.ajax({
+        url: "../../json/text.json",
+        data: {},
+        type: "GET",
+//    beforeSend: function(xhr){xhr.setRequestHeader('X-Test-Header', 'test-value');},//这里设置header
+        success: function(res) {
+//            console.log(res,id);
+            template(res,id)
+        }
+    });
+function template(res,id) {
+    var data1 = res.data[id];
+//console.log(data1);
+    $('.title').html(data1.title);
+    $('.time').html(data1.time);
+    $('.article').html(data1.text);
+}
+</script>
+
+<script src="../../lib/jquery/dist/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../lib/amazeui.min.js"></script>
+
+</html>

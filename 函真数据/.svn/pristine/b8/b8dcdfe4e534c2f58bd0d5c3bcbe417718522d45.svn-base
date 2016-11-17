@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=2, user-scalable=no">
+    <title>板块分析</title>
+    <link rel="stylesheet" href="../font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/module.css">
+</head>
+<body>
+    <div id="modules">
+
+    </div>
+</body>
+<script src="../lib/jquery/dist/jquery.min.js"></script>
+<!--<script src="../lib/artTemplate/dist/template.js"></script>-->
+<script src="../js/module.js"></script>
+</html>

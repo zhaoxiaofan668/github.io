@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="../../lib/amazeui.min.css"/>
+    <link rel="stylesheet" href="../../css/userMain.css"/>
+    <script src="../../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../../lib/amazeui.min.js"></script>
+</head>
+<body>
+<header class="function-title">
+    <a href="user-function.html" class="am-margin-left-sm hasAfter">
+        <i class="am-icon-arrow-left"></i>
+    </a>
+    会员登录
+    <a href="user-register.html" class="am-fr am-margin-right">注册</a>
+</header>
+<div class="user-login">
+    <form action="">
+        <input type="text" placeholder="用户名/手机号/电子邮箱"/>
+        <input type="text" placeholder="密码"/>
+    </form>
+    <a class="btn" href="javascript:;">登录</a>
+    <a class="findPassword" href="javascript:;">找回密码</a>
+    <div class="lineMiddle">社交登录</div>
+    <ul>
+        <li>
+            <a href="javascript:;">
+                <i class="am-icon-weixin am-icon-sm" style="background-color: green"></i>
+                微信
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <i class="am-icon-qq am-icon-sm" style="background-color: blue"></i>
+                QQ
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <i class="am-icon-weibo am-icon-sm" style="background-color: red"></i>
+                微博
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
