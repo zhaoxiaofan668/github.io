@@ -1,0 +1,156 @@
+header,footer{
+  z-index: 999;
+}
+.clearfix{
+  content:'';
+  display: block;
+  clear: both;
+}
+.strate_clear{
+  overflow: auto;
+}
+//选项卡样式
+#strategy-main{
+  margin-top: 40px;
+  width: 100%;
+  #strategy-tab{
+    width: 100%;
+    position:fixed;
+    z-index: 999;
+    height: 38px;
+    li{
+      width: 50%;
+      height:100%;
+      line-height: 44px;
+      float: left;
+      text-align: center;
+      color: #333333;
+      font-size: 18px;
+      background-color: #ffffff;
+    }
+    li.active{
+      border-bottom: 2px solid red;
+    }
+  }
+}
+
+//选型卡隐藏和显示
+.strategy-panel{
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+.strategy-panel.active{
+  display: block;
+  height: 100%;
+  overflow: hidden;
+
+}
+
+//全部选项下的内容
+#strategy-p1.active>div{
+  width: 100%;
+  ul{
+    text-align: center;
+    li:nth-child(1){
+      margin-top: 44px;
+    }
+    li{
+      width: 100%;
+      height: 200px;
+      background-size: cover;
+      margin-top: 8px;
+      position: relative;
+      .all-ul-bottom{
+        z-index: 66;
+        position:absolute;
+        bottom: 0;
+        text-align: center;
+        background-color: #635656;
+        width: calc(100%);
+        color:#fff;
+        line-height: 35px;
+        font-size: 15px;
+        height: 35px;
+        opacity: 0.8;
+        .bottom-ul{
+          float: left;
+          margin-left: 20px;
+        }
+        div{
+          float: right;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+
+//分类选项卡下的内容
+  .strategy-classify{
+    margin-top: 40px;
+    z-index: 666;
+    background: #FFF;
+    .strate-nav-title{
+      height: 45px;
+      background: #f1f1f1;
+      h2{
+        font-size: 18px;
+        float: left;
+        font-weight: normal;
+        line-height: 45px;
+        padding-left: 10px;
+        strong{
+          font-weight: normal;
+          background: url('../img/icon_all.png') no-repeat;
+          background-size: 480px 360px;
+          padding-left: 50px;
+          height: 45px;
+          line-height: 45px;
+          display: inline-block;
+        }
+        strong.title-tu1{
+          background-size: 560px 420px;
+          background-position: 0 -62px;
+        }
+        strong.title-tu2{
+          background-size: 560px 420px;
+          background-position: 0 -202px
+        }
+        strong.title-tu3{
+          background-size: 560px 420px;
+          background-position: 0 -132px;
+        }
+      }
+    }
+    .strate-nav-list{
+      border-top: 1px solid #dadada;
+      ul li{
+        float: left;
+        width: calc(100% / 3);
+        .strate-nav-a{
+          border-right: 1px solid #dadada;
+          border-bottom: 1px solid #dadada;
+          text-align: center;
+          height: 40px;
+          a{
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+
+
+//  喜欢
+.strate_love{
+  z-index: 111;
+  .fa{
+    margin-right: 5px;
+  }
+}
